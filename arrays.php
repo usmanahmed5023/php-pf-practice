@@ -12,5 +12,26 @@ $Info=array("Name" => "Usman Ahmed", "RegNo" => "043", "Address" => "Kot Fateh K
  foreach($Info as $x => $y){
     echo "$x => $y <br>";
 }
-echo $Info['Name'];
+echo  $Info['Name'] . "<br>";
+
+//Multidimensional Arrays
+$Students=array(
+    array("Usman", 22, "Kot Fateh Khan"),
+    array("Ahmed", 23, "Lahore"),
+    array("Ali", 21, "Karachi")
+);
+echo "<table border='1'>";
+echo "<tr>
+<th>Name</th>
+<th>Age</th>
+<th>City</th>
+</tr>";
+foreach($Students as $x){
+    echo "<tr>";
+    foreach($x as $y){
+        echo "<td>$y</td>";
+    }
+    echo "</tr>";
+}
+
 ?>
